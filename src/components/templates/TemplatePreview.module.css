@@ -1,0 +1,500 @@
+/* src/components/templates/TemplatePreview.module.css */
+.templateCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e5e7eb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.templateCard:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.templateCard.active {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.previewWrapper {
+  flex: 1;
+  overflow: hidden;
+  padding: 12px;
+  background: #f9fafb;
+}
+
+/* Two Column Layout */
+.previewTwoColumn {
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.previewHeader {
+  padding: 12px;
+  height: 60px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.columnsContainer {
+  display: flex;
+  height: calc(100% - 60px);
+}
+
+.leftColumn {
+  flex: 0 0 40%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.rightColumn {
+  flex: 1;
+  padding: 10px;
+  background: white;
+}
+
+.section {
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  font-size: 10px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+}
+
+.contactIcon {
+  font-size: 8px;
+  opacity: 0.7;
+}
+
+.contactText {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.skillBadge {
+  font-size: 9px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experienceItem {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.jobTitle {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.jobDuration {
+  font-size: 10px;
+}
+
+.company {
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.jobDescription {
+  font-size: 9px;
+  line-height: 1.3;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Single Column Layout */
+.previewSingleColumn {
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.singleHeader {
+  padding: 12px;
+  background: white;
+}
+
+.mainName {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.mainTitle {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.contactBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  flex-wrap: wrap;
+}
+
+.separator {
+  color: #9ca3af;
+}
+
+.singleContent {
+  padding: 10px;
+}
+
+.contentSection {
+  margin-bottom: 10px;
+}
+
+.sectionHeader {
+  padding-left: 8px;
+  margin-bottom: 6px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.summaryText {
+  font-size: 9px;
+  line-height: 1.4;
+  margin: 0;
+  color: #4b5563;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.skillChip {
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Tech Layout */
+.previewTech {
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.techHeader {
+  padding: 12px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.techAvatar {
+  flex-shrink: 0;
+}
+
+.avatarCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.techInfo {
+  flex: 1;
+}
+
+.techName {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.techTitle {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.techBody {
+  padding: 10px;
+  height: calc(100% - 70px);
+}
+
+.techSection {
+  margin-bottom: 10px;
+}
+
+.techSectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.skillBars {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skillBar {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skillLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.skillPercent {
+  font-weight: 600;
+}
+
+.barContainer {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.techQuickInfo {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.techStat {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.statLabel {
+  font-size: 8px;
+  color: #6b7280;
+}
+
+/* Default Layout */
+.previewDefault {
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.defaultHeader {
+  padding: 12px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.defaultName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.defaultContent {
+  padding: 12px;
+}
+
+.defaultItem {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.defaultLabel {
+  font-size: 10px;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.defaultValue {
+  font-size: 10px;
+  color: #4b5563;
+  flex: 1;
+}
+
+/* Card Footer */
+.cardFooter {
+  padding: 12px;
+  background: white;
+  border-top: 1px solid #f3f4f6;
+}
+
+.templateName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.templateMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.templateBadge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+.templateType {
+  font-size: 10px;
+  color: #6b7280;
+  text-transform: capitalize;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .templateCard {
+    max-width: 100%;
+  }
+  
+  .previewTwoColumn,
+  .previewSingleColumn,
+  .previewTech,
+  .previewDefault {
+    height: 180px;
+  }
+  
+  .contactBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  
+  .separator {
+    display: none;
+  }
+}
+
+/* Animation for active state */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+.templateCard.active {
+  animation: pulse 2s infinite;
+}

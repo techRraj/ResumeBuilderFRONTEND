@@ -1,0 +1,634 @@
+/* src/components/ pages/ profile*/
+
+.settingsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.settingsHeader {
+    margin-bottom: 40px;
+}
+
+.settingsHeader h1 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.settingsHeader p {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* Layout */
+.settingsLayout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .settingsLayout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tabs Sidebar */
+.tabsSidebar {
+    background: #f9fafb;
+    padding: 20px 0;
+    border-right: 1px solid #e5e7eb;
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.tabButton:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.tabButton.active {
+    background: white;
+    color: #667eea;
+    border-left-color: #667eea;
+    font-weight: 600;
+}
+
+.tabIcon {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.tabLabel {
+    flex: 1;
+}
+
+/* Content Area */
+.contentArea {
+    padding: 30px;
+}
+
+/* Settings Section */
+.settingsSection {
+    min-height: 500px;
+}
+
+.settingsSection h3 {
+    font-size: 1.8rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.settingsSection > p {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* Password Form */
+.passwordForm {
+    max-width: 500px;
+    margin: 30px 0;
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.passwordInput {
+    position: relative;
+}
+
+.passwordInput input {
+    width: 100%;
+    padding: 12px 45px 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.passwordInput input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.passwordToggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.passwordRequirements {
+    background: #f0f9ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid #3b82f6;
+}
+
+.passwordRequirements p {
+    margin-bottom: 10px;
+    color: #1e40af;
+    font-size: 0.95rem;
+}
+
+.passwordRequirements ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.passwordRequirements li {
+    margin-bottom: 5px;
+}
+
+.submitButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Security Features */
+.securityFeatures {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #f3f4f6;
+}
+
+.securityFeatures h4 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featureItem {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.featureIcon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.featureItem h5 {
+    color: #1f2937;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.featureItem p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.featureButton {
+    padding: 6px 12px;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.featureButton:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+/* Notification Settings */
+.notificationSettings {
+    margin: 30px 0;
+}
+
+.notificationItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.notificationItem:last-child {
+    border-bottom: none;
+}
+
+.notificationItem h5 {
+    color: #1f2937;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.notificationItem p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    max-width: 400px;
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #667eea;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Email Preferences */
+.emailPreferences {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f3f4f6;
+}
+
+.emailPreferences h4 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.emailFrequency {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.emailFrequency label {
+    color: #374151;
+    font-weight: 500;
+}
+
+.selectInput {
+    padding: 10px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #374151;
+    background: white;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.selectInput:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Theme Settings */
+.themeSettings {
+    margin: 30px 0;
+}
+
+.themeSettings h4 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.themeOptions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.themeOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    background: none;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.themeOption:hover {
+    border-color: #667eea;
+}
+
+.themeOption.active {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.themePreviewLight,
+.themePreviewDark,
+.themePreviewAuto {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+}
+
+.themePreviewLight {
+    background: white;
+}
+
+.themePreviewDark {
+    background: #1f2937;
+}
+
+.themePreviewAuto {
+    background: linear-gradient(to right, white 50%, #1f2937 50%);
+}
+
+/* Color Settings */
+.colorSettings {
+    margin: 30px 0;
+}
+
+.colorSettings h4 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.colorOptions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.colorOption {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.colorOption:hover {
+    transform: scale(1.1);
+}
+
+/* Font Settings */
+.fontSettings {
+    margin: 30px 0;
+}
+
+.fontSettings h4 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.fontSizeSlider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px;
+}
+
+.fontSizeSlider span {
+    color: #6b7280;
+    font-size: 0.9rem;
+    min-width: 40px;
+}
+
+.slider {
+    flex: 1;
+    height: 33px;
+    border-radius: 50px;
+    background: #e5e7eb;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+
+/* Language Settings */
+.languageSettings {
+    max-width: 400px;
+}
+
+/* Danger Zone */
+.dangerActions {
+    margin: 30px 0;
+}
+
+.dangerItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border: 2px solid #fee2e2;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: #fef2f2;
+}
+
+.dangerItem h5 {
+    color: #dc2626;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.dangerItem p {
+    color: #6b7280;
+    max-width: 400px;
+}
+
+.exportButton {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #dc2626;
+    color: #dc2626;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.exportButton:hover {
+    background: #dc2626;
+    color: white;
+}
+
+.deleteButton {
+    padding: 10px 20px;
+    background: #dc2626;
+    border: 2px solid #dc2626;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.deleteButton:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.warningBox {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.warningBox h4 {
+    color: #92400e;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.warningBox ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #92400e;
+}
+
+.warningBox li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .settingsContainer {
+        padding: 20px 15px;
+    }
+
+    .settingsHeader h1 {
+        font-size: 2rem;
+    }
+
+    .contentArea {
+        padding: 20px;
+    }
+
+    .notificationItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .dangerItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .emailFrequency {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .featureGrid {
+        grid-template-columns: 1fr;
+    }
+}

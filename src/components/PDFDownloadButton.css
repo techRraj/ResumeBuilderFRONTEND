@@ -1,0 +1,96 @@
+/* components/PDFDownloadButton.css */
+.pdf-download-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+}
+
+.pdf-download-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.pdf-download-btn.primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.pdf-download-btn.secondary {
+    background: #28a745;
+    color: white;
+}
+
+.pdf-download-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.pdf-download-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.pdf-download-btn.downloading {
+    background: #6c757d;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.pdf-download-alt {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.pdf-download-alt:hover {
+    background: #667eea;
+    color: white;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.download-note {
+    color: #6c757d;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 18px;
+}

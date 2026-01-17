@@ -1,0 +1,239 @@
+/* src/components/ pages/ payment*/
+
+.successContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.successCard {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.successIcon {
+    font-size: 5rem;
+    color: #10b981;
+    margin-bottom: 20px;
+    animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.successMessage h1 {
+    color: #1f2937;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.successMessage p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Action Buttons */
+.actionButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.actionButtons button,
+.actionButtons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.primaryButton {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.secondaryButton {
+    background: #f3f4f6;
+    color: #374151;
+    border: 2px solid #d1d5db;
+}
+
+.secondaryButton:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.tertiaryButton {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.tertiaryButton:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* Features Unlocked */
+.featuresUnlocked {
+    background: #f0f9ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.featuresUnlocked h3 {
+    color: #1f2937;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.featuresUnlocked ul {
+    list-style: none;
+    padding: 0;
+}
+
+.featuresUnlocked li {
+    color: #374151;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.featuresUnlocked li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* Next Steps */
+.nextSteps {
+    text-align: left;
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.nextSteps h3 {
+    color: #1f2937;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.nextSteps ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.nextSteps li {
+    color: #374151;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.nextSteps a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nextSteps a:hover {
+    text-decoration: underline;
+}
+
+/* Countdown */
+.countdown {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.countdown p {
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.skipButton {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.skipButton:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .successCard {
+        padding: 30px 20px;
+    }
+
+    .successMessage h1 {
+        font-size: 2rem;
+    }
+
+    .successMessage p {
+        font-size: 1rem;
+    }
+
+    .actionButtons button,
+    .actionButtons a {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .successIcon {
+        font-size: 4rem;
+    }
+
+    .successMessage h1 {
+        font-size: 1.8rem;
+    }
+
+    .featuresUnlocked,
+    .nextSteps {
+        padding: 15px;
+    }
+}

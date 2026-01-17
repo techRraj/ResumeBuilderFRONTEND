@@ -1,0 +1,915 @@
+.container {
+  padding: 20px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Subscription Status */
+.subscriptionStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.subscriptionBadge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscriptionBadge.free {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: white;
+}
+.subscriptionBadge.premium {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+}
+
+
+.subscriptionBadge.vip {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+
+.upgradeBtn {
+  padding: 8px 16px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upgradeBtn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+
+/* Template Modal */
+.templateModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.templateModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.templateModalHeader h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.closeModal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.templateCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.templateCategories h4 {
+  color: #1f2937;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+/* Layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Form Panel */
+.formPanel {
+  flex: 1;
+  min-width: 400px;
+  max-width: 500px;
+  background: white;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 30px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sectionTitle:first-of-type {
+  margin-top: 0;
+}
+
+/* Form Groups */
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s;
+  background: white;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  background: linear-gradient(135deg, #ffffff, #faf5ff);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* Experience and Education Items */
+.experienceItem, .educationItem {
+  background: #f8fafc;
+  padding: 49px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Buttons */
+.addButton {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+}
+
+.actions {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #e2e8f0;
+  display: flex;
+  gap: 15px;
+}
+
+.saveButton, .downloadButton {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.saveButton:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.downloadButton {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.downloadButton:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.downloadButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.downloadButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.downloadButton.downloading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Mobile touch feedback */
+@media (hover: none) and (pointer: coarse) {
+  .downloadButton:active {
+    transform: scale(0.95);
+  }
+}
+/* Save Success Message */
+.saveSuccess {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Preview Panel */
+.previewPanel {
+  border: 3px solid;
+  border-image: linear-gradient(135deg, #667eea, #ec4899) 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.previewContainer {
+  background: #e2e8f0;
+  border-radius: 16px;
+  padding: 11px;
+  min-height: 600px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.previewFrame {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  min-height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  max-height: 700px;
+}
+
+/* Preview Content */
+.previewContent {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1e293b;
+}
+
+.previewHeader {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  padding: 20px 30px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.previewHeader h3 {
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+.previewActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+.templateName {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.changeTemplateBtn {
+  padding: 6px 16px;
+  background: #e0f2fe;
+  color: #0369a1;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.changeTemplateBtn:hover {
+  background: #bae6fd;
+}
+.previewName {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 5px;
+}
+
+.previewTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3b82f6;
+  margin: 0 0 10px;
+}
+
+.previewContact {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.previewSection {
+  margin-bottom: 25px;
+}
+
+.previewSectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.previewItem {
+  margin-bottom: 20px;
+}
+
+.previewItemHeader {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.previewDuration {
+  font-size: 13px;
+  color: #64748b;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.previewSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.previewSkillBadge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formPanel, .previewPanel {
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .previewPanel {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .formPanel {
+    padding: 20px;
+    min-width: unset;
+  }
+  
+ .previewContainer {
+  flex: 1;
+  padding: 30px;
+  background: #f1f5f9;
+  overflow: auto;
+}
+  
+ .previewFrame {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  min-height: 700px;
+  transform-origin: top left;
+  transform: scale(0.85);
+  margin: -40px;
+}
+  
+
+.previewInfo {
+  padding: 20px 30px;
+  border-top: 2px solid #e2e8f0;
+  background: #f8fafc;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.previewInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.previewInfo strong {
+  color: #1f2937;
+}
+  .previewName {
+    font-size: 24px;
+  }
+  
+  .previewTitle {
+    font-size: 16px;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formPanel, .previewPanel {
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .previewPanel {
+    position: relative;
+    top: 0;
+    min-width: unset;
+  }
+  
+  .previewFrame {
+    transform: scale(1);
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .formPanel, .previewPanel {
+    padding: 20px;
+  }
+  
+  .previewFrame {
+    padding: 0;
+  }
+  
+  .previewInfo {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .templateGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .subscriptionStatus {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .formPanel {
+    padding: 15px;
+  }
+  
+  .input, .textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .templateGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .formPanel {
+    padding: 15px;
+  }
+  
+  .previewFrame {
+    padding: 20px;
+  }
+  
+  .input, .textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Add to existing Editor.module.css */
+
+.errorAlert {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-left: 4px solid #dc2626;
+  margin: 20px auto;
+  max-width: 800px;
+  font-weight: 500;
+}
+
+.downloadButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.downloadButton:disabled:hover {
+  transform: none;
+  background: #10b981;
+}
+
+.printButton {
+  flex: 1;
+  padding: 15px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.printButton:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.projectItem {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  padding: 49px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #bae6fd;
+  position: relative;
+}
+
+.projectItem:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+}
+
+/* Delete Button */
+.deleteButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 2px solid #fca5a5;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deleteButton:hover {
+  background: #fecaca;
+}
+
+/* No Data Message */
+.noData {
+  text-align: center;
+  color: #94a3b8;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+}
+
+/* pages/EditorPage.css */
+.editor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.editor-content {
+    display: grid;
+    gap: 30px;
+}
+
+.editor-textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.templates-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.template-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.template-preview {
+    height: 150px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.template-placeholder {
+    font-size: 14px;
+    color: #666;
+}
+
+.quick-download-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.quick-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.quick-btn {
+    padding: 12px 24px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.quick-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.quick-btn.outline {
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.quick-btn.outline:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Add to Editor.module.css */
+.downloadButton {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.downloadButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Add animation for download button */
+@keyframes downloading {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+.downloadButton.downloading {
+  animation: downloading 1s infinite;
+}

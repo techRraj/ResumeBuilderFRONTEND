@@ -1,0 +1,443 @@
+/* src/components/ pages/ payment*/
+
+.upgradeContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.requiredAlert {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #f59e0b;
+    margin-top: 15px;
+}
+
+/* Billing Toggle */
+.billingToggle {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.toggleContainer {
+    display: inline-flex;
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 5px;
+    position: relative;
+}
+
+.toggleButton {
+    padding: 12px 30px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.toggleButton.active {
+    background: white;
+    color: #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.saveBadge {
+    background: #10b981;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Plans Grid */
+.plansGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.planCard {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.planCard:hover {
+    border-color: #667eea;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.planCard.selected {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+}
+
+.planCard.popular {
+    border-color: #8b5cf6;
+}
+
+.planCard.currentPlan {
+    border-color: #10b981;
+}
+
+.popularBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.currentBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10b981;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.planHeader h3 {
+    font-size: 1.8rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.planDescription {
+    color: #6b7280;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.priceSection {
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1;
+}
+
+.billingPeriod {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.savings {
+    color: #10b981;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Features List */
+.featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.featuresList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.featureIcon {
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Upgrade Button */
+.upgradeButton {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: auto;
+}
+
+.upgradeButton:not(.disabledButton):not(.currentButton) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.upgradeButton:not(.disabledButton):not(.currentButton):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.currentButton {
+    background: #10b981;
+    color: white;
+}
+
+.disabledButton {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Feature Comparison */
+.featureComparison {
+    margin: 80px 0;
+}
+
+.featureComparison h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+.comparisonTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comparisonTable thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.comparisonTable th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparisonTable th:first-child {
+    width: 200px;
+}
+
+.comparisonTable tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.comparisonTable tbody tr:hover {
+    background: #f9fafb;
+}
+
+.comparisonTable td {
+    padding: 15px 20px;
+    color: #374151;
+}
+
+.comparisonTable td:first-child {
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.comparisonTable td:nth-child(2) {
+    background: #f8fafc;
+}
+
+.comparisonTable td:nth-child(3) {
+    background: #f0f9ff;
+}
+
+.comparisonTable td:nth-child(4) {
+    background: #f5f3ff;
+}
+
+.comparisonTable td:nth-child(5) {
+    background: #fffbeb;
+}
+
+/* FAQ */
+.faqSection {
+    margin: 80px 0;
+}
+
+.faqSection h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faqItem {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s;
+}
+
+.faqItem:hover {
+    border-color: #667eea;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faqItem h4 {
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.faqItem p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Support Section */
+.supportSection {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.supportCard {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.supportIcon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.supportCard h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.supportCard p {
+    opacity: 0.9;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.supportButton {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.supportButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .plansGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .plansGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .comparisonTable {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .supportCard {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toggleButton {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+}

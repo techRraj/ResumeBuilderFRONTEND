@@ -1,0 +1,98 @@
+[
+  {
+    "id": "modern",
+    "name": "Modern",
+    "category": "free",
+    "price": 0,
+    "thumbnail": "https://via.placeholder.com/300x400/3b82f6/ffffff?text=Modern",
+    "description": "Clean, professional design perfect for tech roles and modern industries.",
+    "colors": {
+      "primary": "#3b82f6",
+      "secondary": "#1e40af",
+      "background": "#ffffff",
+      "text": "#1f2937"
+    },
+    "layout": "two-column",
+    "features": ["ATS Friendly", "Modern Design", "Free to Use"]
+  },
+  {
+    "id": "minimal",
+    "name": "Minimal",
+    "category": "free",
+    "price": 0,
+    "thumbnail": "https://via.placeholder.com/300x400/6b7280/ffffff?text=Minimal",
+    "description": "Simple and elegant design focused on clarity and readability.",
+    "colors": {
+      "primary": "#6b7280",
+      "secondary": "#374151",
+      "background": "#ffffff",
+      "text": "#111827"
+    },
+    "layout": "single-column",
+    "features": ["Simple Layout", "Clean Typography", "Free to Use"]
+  },
+  {
+    "id": "executive",
+    "name": "Executive",
+    "category": "premium",
+    "price": 9.99,
+    "thumbnail": "https://via.placeholder.com/300x400/8b5cf6/ffffff?text=Executive",
+    "description": "Professional layout ideal for senior management, finance, and corporate roles.",
+    "colors": {
+      "primary": "#8b5cf6",
+      "secondary": "#7c3aed",
+      "background": "#ffffff",
+      "text": "#1f2937"
+    },
+    "layout": "two-column",
+    "features": ["Executive Style", "Premium Design", "ATS Optimized"]
+  },
+  {
+    "id": "tech-pro",
+    "name": "Tech Pro",
+    "category": "vip",
+    "price": 24.99,
+    "thumbnail": "https://via.placeholder.com/300x400/10b981/ffffff?text=Tech+Pro",
+    "description": "Advanced template with skill bars, project highlights, and tech-focused sections.",
+    "colors": {
+      "primary": "#10b981",
+      "secondary": "#059669",
+      "background": "#ffffff",
+      "text": "#064e3b"
+    },
+    "layout": "tech",
+    "features": ["Skill Charts", "Code Snippet Ready", "VIP Exclusive", "Developer Focused"]
+  },
+  {
+    "id": "creative",
+    "name": "Creative",
+    "category": "premium",
+    "price": 12.99,
+    "thumbnail": "https://via.placeholder.com/300x400/ec4899/ffffff?text=Creative",
+    "description": "Bold and artistic design for designers, artists, and creative professionals.",
+    "colors": {
+      "primary": "#ec4899",
+      "secondary": "#db2777",
+      "background": "#fdf2f8",
+      "text": "#581c87"
+    },
+    "layout": "asymmetrical",
+    "features": ["Unique Layout", "Colorful Design", "Portfolio Ready"]
+  },
+  {
+    "id": "academic",
+    "name": "Academic",
+    "category": "premium",
+    "price": 7.99,
+    "thumbnail": "https://via.placeholder.com/300x400/0ea5e9/ffffff?text=Academic",
+    "description": "Structured format for researchers, professors, and PhD candidates.",
+    "colors": {
+      "primary": "#0ea5e9",
+      "secondary": "#0284c7",
+      "background": "#f0f9ff",
+      "text": "#0c4a6e"
+    },
+    "layout": "classic",
+    "features": ["Publication Section", "Research Focus", "Formal Style"]
+  }
+]
