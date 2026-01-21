@@ -34,8 +34,8 @@ const Login = () => {
   const from = location.state?.from?.pathname || '/dashboard';
 
   // API Configuration
-  const API_BASE = process.env.REACT_APP_API_URL || 'https://resume-builder-for-backend.onrender.com';
 
+const API_BASE = (process.env.REACT_APP_API_URL || 'https://resume-builder-for-backend.onrender.com').trim();
   // Check for saved credentials
   useEffect(() => {
     const savedEmail = localStorage.getItem('rememberedEmail');
@@ -141,10 +141,15 @@ const Login = () => {
 
     } catch (err) {
       console.error('Login error:', err);
-      
+       console.error('Network error details:', {
+    message: err.message,
+    code: err.code,
+    url: `${API_BASE}/api/auth/login`,
+    config: err.config
+  });
       // Enhanced error handling
       if (err.code === 'ERR_NETWORK') {
-        setError('Cannot connect to server. Please check your internet connection.');
+    setError('Cannot connect to server. Check if the backend is running and your internet connection is stable.');
       } else if (err.response?.status === 401) {
         setError('Invalid email or password. Please try again.');
       } else if (err.response?.status === 429) {
