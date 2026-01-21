@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
-  FaRocket, FaMagic, FaDownload, FaShieldAlt, 
+  FaRocket,  FaDownload, FaShieldAlt, 
   FaSync, FaMobileAlt, FaChartLine, FaStar,
   FaCheckCircle, FaArrowRight, FaPlayCircle,
   FaUsers, FaAward, FaLightbulb, FaSearch,
@@ -551,9 +551,9 @@ const HomePage = () => {
               <p>Professional resume builder trusted by job seekers worldwide</p>
               <div className={styles.socialLinks}>
                 {['Twitter', 'LinkedIn', 'GitHub', 'Instagram'].map((social) => (
-                  <a key={social} href="#" className={styles.socialLink}>
+                  <Link key={social} to="#" className={styles.socialLink}>
                     {social}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

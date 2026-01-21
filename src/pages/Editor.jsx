@@ -82,7 +82,7 @@ const Editor = () => {
 
   const availableTemplates = getAvailableTemplates();
 
-  // Load saved data if editing existing resume
+  // Load saved data if editing existing resume - FIXED DEPENDENCY ISSUE
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -98,14 +98,19 @@ const Editor = () => {
           });
           if (res.ok) {
             const userData = await res.json();
-            setUserSubscription(userData.subscription.plan);
-            localStorage.setItem('user', JSON.stringify({ ...user, subscription: userData.subscription.plan }));
+            // Use functional update to avoid dependency warning
+            setUserSubscription(u => userData.subscription.plan);
+            localStorage.setItem('user', JSON.stringify({ 
+              ...user, 
+              subscription: userData.subscription.plan 
+            }));
           }
         } catch (err) {
           console.warn('Failed to fetch user data');
         }
       } else {
-        setUserSubscription(userSubscription);
+        // Use functional update here too
+        setUserSubscription(u => 'free');
       }
     };
 
@@ -855,13 +860,13 @@ const Editor = () => {
                   />
                 </div>
                 
-                {/* Delete project button */}
+                {/* Delete project button - FIXED TYPO */}
                 <button
                   type="button"
                   className={styles.deleteButton}
                   onClick={() => {
                     const updatedProjects = [...resume.projects];
-                    updatedProjects.splice_(index, 1);
+                    updatedProjects.splice(index, 1); // Fixed: removed underscore
                     setResume(prev => ({
                       ...prev,
                       projects: updatedProjects
@@ -898,7 +903,7 @@ const Editor = () => {
             </button>
             
             <button 
-              className={styles.downloadButton} 
+              className={`${styles.downloadButton} downloadButton`} 
               onClick={handleDownloadPDF}
               disabled={isDownloading}
             >
